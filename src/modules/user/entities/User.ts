@@ -29,7 +29,7 @@ export class User {
   }
 
   set email(email: string) {
-    this.email = email;
+    this.props.email = email;
   }
 
   get password(): string {
@@ -37,7 +37,7 @@ export class User {
   }
 
   set password(password: string) {
-    this.password = password;
+    this.props.password = password;
   }
 
   get name(): string {
@@ -45,7 +45,7 @@ export class User {
   }
 
   set name(name: string) {
-    this.name = name;
+    this.props.name = name;
   }
 
   get createdAt(): Date {
