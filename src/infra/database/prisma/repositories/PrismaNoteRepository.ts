@@ -53,6 +53,9 @@ export class PrismaNoteRepository implements NoteRepository {
     perPage: number,
   ): Promise<Note[]> {
     const notes = await this.prisma.note.findMany({
+       where: {
+        id: userId,
+      },
       take: perPage,
       skip: (page - 1) * perPage,
     });
